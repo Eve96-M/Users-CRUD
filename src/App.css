@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap'); /*font-family: 'Raleway', sans-serif;*/
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-N-User{
+  margin-top:1rem;
+  background-color: var(--button-color);
+  color:var(--cultured);
+  border: transparent;
+  border-radius: 1rem;
+  width: 8rem;
+  height: 2rem;
+}
+
+body{
+  background-color: var(--bg-color);
+}
+
+:root{
+  --old-mauve:#5B2333;
+  --cultured:#F7F4F3;
+  --accent-small:#CBB4B7;
+  --button-color:#7F0D1D;
+  --bg-color:#E8E9F3;
+}
+
+/*mobile form*/
+
+form{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+}
+
+.backgroundCard{
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  height:100%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.315);
+}
+
+.FormCard{
+  display: flex;
+  flex-direction: column;
+  border: transparent;
+  padding: 0 1rem 1rem 1rem;
+  width: 80%;
+  height: 28rem;
+  border-radius: 2rem;
+  background-color: var(--old-mauve);
+  color:var(--cultured);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.closeButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: transparent;
+  width: 2rem;
+  height: 2rem 2rem 0 0;
+  margin: .4rem 1rem;
+  align-self: flex-end;
+  fill:var(--cultured);
+  position:relative;
+  top:.5rem;
+}
+
+.form-title{
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+.input-container{
+  display: flex;
+  flex-direction:column;
+  padding: .5rem;
+}
+
+.input-container input{
+  background: transparent;
+  border: transparent;
+  border-bottom: 1px solid var(--cultured);  
+  color:var(--cultured);
+  padding: 0 1rem;
+  height: 1.3rem;
+  font-size: 18px;
+}
+
+.submitButton{
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 1.6rem;
+  border-radius:1rem;
+  margin: .5rem 0;
+  background-color: var(--button-color);
+  color:var(--cultured);
+  font-weight: bold;
+  border:transparent;
+}
+
+.clearButton{
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 1.4rem;
+  border-radius:1rem;
+  border:transparent;
+  font-weight: bold;
+  background-color: var(--cultured);
+}
+/*mobile Users list*/
+
+.Userlist{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+ul{
+  display:flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.userWrapper{
+  display: flex;
+  border:transparent;
+  flex-direction: column;
+  padding:.2rem;
+  height: 8.5rem;
+  width: 90%;
+  margin: .5rem;
+  border-radius: 1rem;
+  background-color: var(--old-mauve);
+  color:var(--cultured);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+
+
+.userWrapper li{
+  margin-left: 1rem;
+  margin-top: .3rem;
+  width: 80%;
+}
+
+.userWrapper small{
+  font-weight: bold;
+  color:var(--accent-small)
+}
+
+.UserName{
+  font-size: 24px;
+}
+
+.button-wrapper{
+  display: flex;
+  align-self: flex-end;
+  margin: 0 1rem;
+  gap: 1rem;
+}
+
+.Userbutton{
+  display: flex;
+  position:relative;
+  bottom:1.7rem;
+  height: 2rem;
+  width: 2rem;
+  align-items: center;
+  justify-content: center;
+  border: transparent;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.edit{
+  background-color: var(--cultured);
+}
+
+.delete{
+  background-color: var(--button-color);
+  fill:var(--cultured)
+
+}
+
+@media screen and (min-width:576px) {
+  .FormCard{
+    width: 50%;
+  }
+  .userWrapper{
+    width: calc(50% - 1rem)
+  }
+ 
+}
+
+
+@media screen and (min-width:992px) {
+  
+  .userWrapper{
+    width: calc(33.33% - 1rem)
+  }
+}
